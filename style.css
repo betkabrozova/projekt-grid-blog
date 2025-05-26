@@ -66,6 +66,125 @@ blockquote {
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
+
+
+
+p{
+	font-size: 16px;
+	margin: 0px 0px 20px 0px;
+}
+h2{
+	
+	font-size: 35px;
+	color: var(--zelena);
+	margin: 20px 0px;
+}
+figure, blockquote{
+	margin: 20px 0px;
+}
+.tip-vlevo{
+	background-color: var(--svetla);
+	color: var(--tmava);
+	border-right: 2px solid var(--zluta);
+	padding: 20px;
+	text-align: end;
+	font-size: 16px;
+	margin: 20px 0px 20px auto;
+	width: 60%;
+}
+.tip-vpravo{
+	background-color: var(--svetla);
+	color: var(--tmava);
+	border-left: 2px solid var(--zluta);
+	padding: 20px;
+	text-align: start;
+	font-size: 16px;
+	margin: 20px auto 20px 0px;
+	width: 60%;
+}
+
+img{
+	width: 100%;	
+}
+
+figcaption{
+	color: #b2bec3;
+	font-size: 13px;
+}
+blockquote::before{
+	content: "";
+	display: block;
+	background-color: #c4e538;
+	height: 2px;
+	width: 100px;
+	margin: 30px auto;
+}
+blockquote{
+	text-align: center;
+	font-size: 25px;
+	color: var(--seda);
+}
+blockquote::after{
+	content: " ";
+	display: block;
+	background-color: #c4e538;
+	height: 2px;
+	width: 100px;
+	margin: 30px auto;
+}
+h1{
+	font-size: 50px;
+	color: var(--zelena);
+	margin: 20px 0px;
+}
+.meta{
+	color: var(--seda);
+	font-size: 13px;
+}
+.tip a{
+	color: var(--oranzova);
+}
+.tip p{
+	margin: 0;
+}
+footer{
+	color: #b2bec3;
+	margin-top: 30px;
+}
+footer a{
+	color: #b2bec3;
+	
+}
+.tip-obr{
+	display: flex;
+	background-color: var(--svetla);
+	color: var(--tmava);
+	border-right: 2px solid var(--zluta);
+	padding: 20px;
+	text-align: end;
+	font-size: 16px;
+	margin: 20px 0px 20px auto;
+	width: 60%;
+	align-items: end;
+}
+.tip-obr img{
+	width: 100px;
+	flex-basis: 60%;
+}
+.tip-obr p{
+	flex-basis: 40%;
+	margin-right: 15px;
+}
+	
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1100px){
 article{
 	display: grid;
 	grid-template-columns: [page-start] 1fr [content-start] 4fr [content-end] 2fr [page-end];
@@ -89,7 +208,8 @@ figure, blockquote{
 	grid-column: span 3;
 	margin: 20px 0px;
 }
-.tip-vlevo{
+.tip-vlevo, .tip-obr{
+	display: block;
 	grid-column-start: page-start;
 	background-color: var(--svetla);
 	color: var(--tmava);
@@ -163,4 +283,5 @@ footer{
 footer a{
 	color: #b2bec3;
 	
+}
 }
