@@ -66,4 +66,101 @@ blockquote {
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
+article{
+	display: grid;
+	grid-template-columns: [page-start] 1fr [content-start] 4fr [content-end] 2fr [page-end];
+	column-gap: 40px;
+	align-items: start;
+}
+header{
+	grid-column-start: content-start;
+}
+p{
+	grid-column: content-start / content-end;
+	margin: 0px 0px 20px 0px;
+}
+h2{
+	grid-column: content-start / content-end;
+	font-size: 60px;
+	color: var(--zelena);
+	margin: 20px 0px;
+}
+figure, blockquote{
+	grid-column: span 3;
+	margin: 20px 0px;
+}
+.tip-vlevo{
+	grid-column-start: page-start;
+	background-color: var(--svetla);
+	color: var(--tmava);
+	border-right: 2px solid var(--zluta);
+	padding: 20px;
+	text-align: end;
+	font-size: 16px;
+	height: fit-content;
+	margin: 0;
+}
+.tip-vpravo{
+	grid-column: content-end;
+	background-color: var(--svetla);
+	color: var(--tmava);
+	border-left: 2px solid var(--zluta);
+	padding: 20px;
+	text-align: start;
+	font-size: 16px;
+	height: fit-content;
+	margin: 0;
+}
 
+img{
+	width: 100%;
+	
+}
+figcaption{
+	color: #b2bec3;
+}
+blockquote::before{
+	content: "";
+	display: block;
+	background-color: #c4e538;
+	height: 3px;
+	width: 150px;
+	margin: 30px auto;
+}
+blockquote{
+	text-align: center;
+	font-size: 40px;
+	color: var(--seda);
+}
+blockquote::after{
+	content: " ";
+	display: block;
+	background-color: #c4e538;
+	height: 3px;
+	width: 150px;
+	margin: 30px auto;
+}
+h1{
+	font-size: 90px;
+	color: var(--zelena);
+	margin: 40px 0px;
+}
+.meta{
+	color: var(--seda);
+	font-size: 15px;
+}
+.tip a{
+	color: var(--oranzova);
+}
+.tip p{
+	margin: 0;
+}
+footer{
+	grid-column-start: content-start;
+	color: #b2bec3;
+	margin-top: 40px;
+}
+footer a{
+	color: #b2bec3;
+	
+}
